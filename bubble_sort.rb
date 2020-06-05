@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 array = [77, 54, 10_001, 35, 941]
 
 def bubble_sort(array)
