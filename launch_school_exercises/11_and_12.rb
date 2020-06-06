@@ -22,3 +22,10 @@ contacts[:'Sally Johnson'][:address] = contact_data[1][1]
 contacts[:'Sally Johnson'][:phone] = contact_data[1][2]
 
 p contacts
+
+# 12 Using the hash you created from the previous exercise, demonstrate how you would access
+# Joe's email and Sally's phone number?
+
+p contacts[:'Joe Smith'][:email]
+
+p contacts[:'Sally Johnson'][:phone]
