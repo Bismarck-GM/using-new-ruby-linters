@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# What will the following program output?
+
 hash1 = { shoes: 'nike', 'hat' => 'adidas', :hoodie => true }
 hash2 = { 'hat' => 'adidas', :shoes => 'nike', hoodie: true }
 
@@ -8,3 +10,5 @@ if hash1 == hash2
 else
   puts 'These hashes are not the same!'
 end
+
+p hash1, hash2
