@@ -10,6 +10,23 @@
 
 contact_data = ['joe@email.com', '123 Main st.', '555-123-4567']
 contacts = { 'Joe Smith' => {} }
+new_keys = %I[email address phone]
+
+contacts.each { |_, value| new_keys.each { |keys| value[keys] = contact_data.shift } }
+
+p contacts
+p contact_data
+
+# As a bonus, see if you can figure out how to make it work with multiple entries in the contacts hash.
+
+contacts = { 'Joe Smith' => {}, 'Sally Johnson' => {} }
+contact_data = [['joe@email.com', '123 Main st.', '555-123-4567'],
+                ['sally@email.com', '404 Not Found Dr.', '123-234-3454']]
+new_keys = %I[email address phone]
+
+contacts.each_with_index do |(_name, hash), index|
+  new_keys.each { |keys| hash[keys] = contact_data[index].shift }
+end
 
 p contacts
 p contact_data
