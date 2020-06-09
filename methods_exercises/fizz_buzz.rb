@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+banner = File.read("biohazard.txt")
+puts banner
+
 puts 'Input a number to iterate the FizzBuzz'
 
 target_number = gets.chomp.to_i
